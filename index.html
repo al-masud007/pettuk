@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pettuk - Authentic Bengali Food Delivery</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">🍛</span>
+                <span class="brand-name">Pettuk</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="link current">Home</a></li>
+                <li><a href="#dishes" class="link">Dishes</a></li>
+                <li>
+                    <a href="checkout.html" class="link basket-link">
+                        Basket <span class="basket-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>স্বাদে বাঙালি, মনে বাঙালি</h1>
+            <p>Experience the authentic taste of Bengal delivered to your doorstep</p>
+            <div class="search-wrapper">
+                <input type="text" id="foodSearch" placeholder="Search your favorite dish...">
+                <button id="searchBtn">Find</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-wrapper">
+            <button class="filter-pill selected" data-filter="all">All Items</button>
+            <button class="filter-pill" data-filter="fish">🐟 Fish</button>
+            <button class="filter-pill" data-filter="meat">🍖 Meat</button>
+            <button class="filter-pill" data-filter="rice">🍚 Rice</button>
+            <button class="filter-pill" data-filter="sweets">🍮 Sweets</button>
+            <button class="filter-pill" data-filter="snacks">🥘 Snacks</button>
+        </div>
+    </section>
+
+    <main id="dishes" class="dishes-section">
+        <div class="dishes-wrapper">
+
+            <div class="dish-group" data-type="fish">
+                <h2 class="group-heading">🐟 Fish Delicacies</h2>
+                <div class="dish-list">
+                    <article class="dish-item" data-id="101" data-title="Ilish Bhapa" data-cost="450" data-type="fish">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=400" alt="Ilish Bhapa">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Ilish Bhapa</h3>
+                            <p>Steamed hilsa in mustard paste with green chillies</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳450</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="102" data-title="Rui Macher Kalia" data-cost="280" data-type="fish">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400" alt="Rui Macher Kalia">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Rui Macher Kalia</h3>
+                            <p>Rohu fish curry in rich onion-tomato gravy</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳280</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="103" data-title="Chingri Malaikari" data-cost="520" data-type="fish">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=400" alt="Chingri Malaikari">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Chingri Malaikari</h3>
+                            <p>Prawns cooked in creamy coconut milk gravy</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳520</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="104" data-title="Pabda Macher Jhol" data-cost="320" data-type="fish">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400" alt="Pabda Macher Jhol">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Pabda Macher Jhol</h3>
+                            <p>Light fish curry with potatoes and tomatoes</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳320</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="dish-group" data-type="meat">
+                <h2 class="group-heading">🍖 Meat Specialties</h2>
+                <div class="dish-list">
+                    <article class="dish-item" data-id="201" data-title="Kosha Mangsho" data-cost="380" data-type="meat">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1545247181-516773cae754?w=400" alt="Kosha Mangsho">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Kosha Mangsho</h3>
+                            <p>Slow-cooked spicy mutton with rich dark gravy</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳380</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="202" data-title="Chicken Rezala" data-cost="320" data-type="meat">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Chicken Rezala">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Chicken Rezala</h3>
+                            <p>Creamy white chicken curry with yogurt and cashews</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳320</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="203" data-title="Beef Bhuna" data-cost="350" data-type="meat">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Beef Bhuna">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Beef Bhuna</h3>
+                            <p>Dry roasted beef with aromatic spices</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳350</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="204" data-title="Duck Curry" data-cost="480" data-type="meat">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1547928578-bca3e9c5a0ab?w=400" alt="Duck Curry">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Duck Curry</h3>
+                            <p>Traditional Bengali duck curry with whole spices</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳480</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="dish-group" data-type="rice">
+                <h2 class="group-heading">🍚 Rice & Biryani</h2>
+                <div class="dish-list">
+                    <article class="dish-item" data-id="301" data-title="Mutton Biryani" data-cost="320" data-type="rice">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400" alt="Mutton Biryani">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Mutton Biryani</h3>
+                            <p>Fragrant basmati rice layered with tender mutton</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳320</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="302" data-title="Khichuri" data-cost="180" data-type="rice">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400" alt="Khichuri">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Khichuri</h3>
+                            <p>Comfort food - rice and lentils cooked with ghee</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳180</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="303" data-title="Chicken Pulao" data-cost="260" data-type="rice">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400" alt="Chicken Pulao">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Chicken Pulao</h3>
+                            <p>Aromatic rice with chicken and whole spices</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳260</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="304" data-title="Beef Tehari" data-cost="280" data-type="rice">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400" alt="Beef Tehari">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Beef Tehari</h3>
+                            <p>Spiced rice dish with beef chunks and potatoes</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳280</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="dish-group" data-type="sweets">
+                <h2 class="group-heading">🍮 Bengali Sweets</h2>
+                <div class="dish-list">
+                    <article class="dish-item" data-id="401" data-title="Roshogolla" data-cost="60" data-type="sweets">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1666190077557-ce39b4fce09d?w=400" alt="Roshogolla">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Roshogolla</h3>
+                            <p>Spongy cottage cheese balls in sugar syrup (4 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳60</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="402" data-title="Shandesh" data-cost="80" data-type="sweets">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1605197161470-5f2c7a4c2d83?w=400" alt="Shandesh">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Shandesh</h3>
+                            <p>Classic Bengali milk sweet with cardamom (6 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳80</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="403" data-title="Mishti Doi" data-cost="50" data-type="sweets">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400" alt="Mishti Doi">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Mishti Doi</h3>
+                            <p>Sweet yogurt set in clay pot</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳50</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="404" data-title="Patishapta" data-cost="90" data-type="sweets">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400" alt="Patishapta">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Patishapta</h3>
+                            <p>Rice crepes filled with coconut and jaggery (4 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳90</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="dish-group" data-type="snacks">
+                <h2 class="group-heading">🥘 Snacks & Starters</h2>
+                <div class="dish-list">
+                    <article class="dish-item" data-id="501" data-title="Beguni" data-cost="40" data-type="snacks">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400" alt="Beguni">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Beguni</h3>
+                            <p>Crispy fried eggplant fritters (6 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳40</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="502" data-title="Shingara" data-cost="50" data-type="snacks">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=400" alt="Shingara">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Shingara</h3>
+                            <p>Crispy pastry with spiced potato filling (4 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳50</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="503" data-title="Aloo Chop" data-cost="35" data-type="snacks">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400" alt="Aloo Chop">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Aloo Chop</h3>
+                            <p>Spiced mashed potato cutlets (4 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳35</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-item" data-id="504" data-title="Piyaju" data-cost="30" data-type="snacks">
+                        <figure class="dish-photo">
+                            <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=400" alt="Piyaju">
+                        </figure>
+                        <div class="dish-details">
+                            <h3>Piyaju</h3>
+                            <p>Onion and lentil fritters (8 pcs)</p>
+                            <div class="dish-footer">
+                                <span class="cost">৳30</span>
+                                <div class="actions">
+                                    <button class="btn-add">Add</button>
+                                    <button class="btn-order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 class="footer-brand">🍛 Pettuk</h4>
+                <p>Bringing the authentic taste of Bengal to your home since 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#dishes">Our Dishes</a></li>
+                    <li><a href="checkout.html">Basket</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <p><a href="mailto:hello@pettuk.com.bd">hello@pettuk.com.bd</a></p>
+                <p><a href="tel:+8801987654321">01987-654321</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pettuk. Crafted with love in Bangladesh.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

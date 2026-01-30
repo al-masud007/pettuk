@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pettuk</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">🍛</span>
+                <span class="brand-name">Pettuk</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="link">Home</a></li>
+                <li><a href="index.html#dishes" class="link">Dishes</a></li>
+                <li>
+                    <a href="checkout.html" class="link basket-link current">
+                        Basket <span class="basket-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="checkout-main">
+        <div class="checkout-container">
+            <h1 class="checkout-title">Your Basket</h1>
+
+            <div class="checkout-grid">
+                <section class="basket-items-section">
+                    <h2>Selected Items</h2>
+                    <div id="basketItems" class="basket-items"></div>
+                    <div id="emptyBasket" class="empty-basket hidden">
+                        <p>Your basket is empty</p>
+                        <a href="index.html" class="btn-primary">Explore Dishes</a>
+                    </div>
+                </section>
+
+                <aside class="billing-section">
+                    <h2>Bill Summary</h2>
+                    <div class="billing-card">
+                        <div class="bill-row">
+                            <span>Items Total</span>
+                            <span id="itemsTotal">৳0</span>
+                        </div>
+                        <div class="bill-row">
+                            <span>Delivery Charge</span>
+                            <span id="deliveryCharge">৳40</span>
+                        </div>
+                        <div class="bill-row">
+                            <span>Service Fee (3%)</span>
+                            <span id="serviceFee">৳0</span>
+                        </div>
+                        <div class="bill-divider"></div>
+                        <div class="bill-row grand-total">
+                            <span>Grand Total</span>
+                            <span id="grandTotal">৳0</span>
+                        </div>
+                        <div class="checkout-actions">
+                            <button id="confirmOrder" class="btn-confirm">Confirm Order</button>
+                            <a href="index.html" class="btn-back">Add More Items</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 class="footer-brand">🍛 Pettuk</h4>
+                <p>Bringing the authentic taste of Bengal to your home since 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#dishes">Our Dishes</a></li>
+                    <li><a href="checkout.html">Basket</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <p><a href="mailto:hello@pettuk.com.bd">hello@pettuk.com.bd</a></p>
+                <p><a href="tel:+8801987654321">01987-654321</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pettuk. Crafted with love in Bangladesh.</p>
+        </div>
+    </footer>
+
+    <div id="orderSuccess" class="success-overlay hidden">
+        <div class="success-box">
+            <div class="success-icon">✓</div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for choosing Pettuk. Your delicious Bengali meal will arrive soon!</p>
+            <a href="index.html" class="btn-primary">Return Home</a>
+        </div>
+    </div>
+
+    <script src="scripts/checkout.js"></script>
+</body>
+</html>
